@@ -1,0 +1,59 @@
+<web-app>
+    <!-- Configure Database Connection Parameters -->
+    <context-param>
+        <param-name>db.url</param-name>
+        <param-value>jdbc:postgresql://localhost:5432/access_management_db</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.username</param-name>
+        <param-value>your_db_username</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.password</param-name>
+        <param-value>your_db_password</param-value>
+    </context-param>
+
+    <!-- Servlet Configurations -->
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>com.example.accessmanagement.servlet.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.accessmanagement.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SoftwareServlet</servlet-name>
+        <servlet-class>com.example.accessmanagement.servlet.SoftwareServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.example.accessmanagement.servlet.RequestServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ApprovalServlet</servlet-name>
+        <servlet-class>com.example.accessmanagement.servlet.ApprovalServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/SignUpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SoftwareServlet</servlet-name>
+        <url-pattern>/SoftwareServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/RequestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ApprovalServlet</servlet-name>
+        <url-pattern>/ApprovalServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
